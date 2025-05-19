@@ -1,0 +1,16 @@
+PE Router:
+
+Enable MPLS:
+
+mpls label-switched
+VRF (Virtual Routing and Forwarding) Configuration (Optional):
+
+Create a VRF for each VPN if using MPLS VPNs.
+Assign interfaces connecting to CE routers to the corresponding VRF.
+Routing Protocol Configuration:
+redistribute ospf 1 route-target target-value (redistribute OSPF routes into MPLS)
+Label Distribution Protocol (LDP):
+interface GigabitEthernet0/0
+mpls ldp advertise-opaque neighbors 10.0.0.2 
+
+
